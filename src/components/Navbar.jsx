@@ -23,7 +23,7 @@ export const Navbar = () => {
 
   return (
     <div className="hidden sm:block">
-      <nav className="fixed flex w-full bg-black/70 py-4 px-10 z-50">
+      <nav className="fixed flex w-full bg-black py-4 px-10 z-50">
         <div className="flex-1 flex items-center text-gray-200 italic font-bold">
           <Link to={"/"} className="text-center text-2xl">
             Jake Russel's Portfolio
