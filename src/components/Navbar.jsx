@@ -33,7 +33,11 @@ export const Navbar = () => {
       <div className="hidden sm:block">
         <nav className="fixed flex w-full bg-black py-4 px-10 z-50">
           <div className="flex-1 flex items-center text-gray-200 italic font-bold">
-            <Link to={"/"} className="text-center text-2xl">
+            <Link
+              to={"/"}
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+              className="text-center text-xl"
+            >
               Jake Russel's Portfolio
             </Link>
           </div>
@@ -44,7 +48,10 @@ export const Navbar = () => {
                   <NavList
                     key={index}
                     isSelected={selectList === list.name}
-                    onSelect={() => handleSelect(list.name)}
+                    onSelect={() => {
+                      handleSelect(list.name);
+                      window.scrollTo({ top: 0, behavior: "smooth" });
+                    }}
                     listName={list.name}
                     path={list.path}
                   />
