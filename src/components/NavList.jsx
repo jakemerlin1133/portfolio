@@ -6,8 +6,10 @@ export const NavList = ({ listName, onSelect, isSelected, path }) => {
     <Link
       to={path}
       onClick={onSelect}
-      className={` hover:text-zinc-400 px-4 rounded-lg text-md font-medium ${
-        isSelected ? "text-zinc-400" : "text-gray-200"
+      className={`hover:bg-zinc-200 hover:text-black sm:hover:text-zinc-400 sm:hover:bg-transparent py-2 sm:py-0 px-4 text-md font-medium ${
+        isSelected
+          ? "text-black bg-zinc-200 sm:text-zinc-400 sm:bg-transparent"
+          : "text-zinc-200"
       }`}
     >
       {listName}

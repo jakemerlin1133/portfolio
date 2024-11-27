@@ -54,11 +54,27 @@ export const Navbar = () => {
         <MdMenu className="text-3xl z-50 text-gray-200" />
       </div>
 
-      {/* <div className="relative w-screen ">
-        <div className="absolute bg-blue-900 top-0 right-0 h-screen w-7/12 z-50">
-          qweqweqwqwe
+      <div className="sm:hidden relative w-screen z-40">
+        <div className="fixed bg-blue-900 top-0 right-0 h-screen w-7/12 z-50">
+          <nav className="bg-black z-50 pt-10 h-full">
+            <ul className="flex flex-col">
+              {Lists.map((list, index) => {
+                return (
+                  <NavList
+                    key={index}
+                    isSelected={selectList === list.name}
+                    onSelect={() => handleSelect(list.name)}
+                    listName={list.name}
+                    path={list.path}
+                  />
+                );
+              })}
+            </ul>
+          </nav>
         </div>
-      </div> */}
+      </div>
+
+      <div className="fixed bg-black/70 h-screen w-screen"></div>
     </>
   );
 };

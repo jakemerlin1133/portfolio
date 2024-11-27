@@ -42,7 +42,7 @@ export const Projects = () => {
             whileInView={{ opacity: 1 }}
             initial={{ opacity: 0 }}
             transition={{ duration: 0.8 }}
-            className="w-full sm:w-1/2 z-40 p-5 pb-16 flex items-center justify-center"
+            className="w-full sm:w-1/2 z-20 p-5 pb-16 flex items-center justify-center"
           >
             <img
               className="justify-center rounded-[20px] z-20 sm:h-[300px] sm:w-[500px] mt-32"
@@ -55,7 +55,7 @@ export const Projects = () => {
             whileInView={{ opacity: 1, y: 0 }}
             initial={{ opacity: 0, y: 100 }}
             transition={{ duration: 0.8 }}
-            className="w-full sm:w-1/2 z-40 flex items-center justify-center"
+            className="w-full sm:w-1/2 z-20 flex items-center justify-center"
           >
             <div className="text-center px-10" id="content">
               <h1 className="text-gray-300 text-center font-bold text-6xl sm:text-5xl italic pb-8">
@@ -83,7 +83,7 @@ export const Projects = () => {
             whileInView={{ opacity: 1, y: 0 }}
             initial={{ opacity: 0, y: 100 }}
             transition={{ duration: 0.8 }}
-            className="w-full sm:w-1/2 z-40 flex items-center justify-center"
+            className="w-full sm:w-1/2 z-20 flex items-center justify-center"
           >
             <div className="text-center px-10" id="content">
               <h1 className="text-gray-300 text-center font-bold text-6xl sm:text-5xl italic pb-8">
@@ -110,7 +110,7 @@ export const Projects = () => {
             whileInView={{ opacity: 1 }}
             initial={{ opacity: 0 }}
             transition={{ duration: 0.8 }}
-            className="w-full sm:w-1/2 z-40 p-5 flex items-center justify-center"
+            className="w-full sm:w-1/2 z-20 p-5 flex items-center justify-center"
           >
             <img
               className="justify-center rounded-[20px] z-20 sm:h-[300px] sm:w-[500px] mt-20"
@@ -125,7 +125,7 @@ export const Projects = () => {
             whileInView={{ opacity: 1 }}
             initial={{ opacity: 0 }}
             transition={{ duration: 0.8 }}
-            className="w-full sm:w-1/2 z-40 p-5 flex items-center justify-center"
+            className="w-full sm:w-1/2 z-20 p-5 flex items-center justify-center"
           >
             <img
               className="justify-center rounded-[20px] z-20 sm:h-[300px] sm:w-[500px] mt-20"
@@ -138,7 +138,7 @@ export const Projects = () => {
             whileInView={{ opacity: 1, y: 0 }}
             initial={{ opacity: 0, y: 100 }}
             transition={{ duration: 0.8 }}
-            className="w-full sm:w-1/2 z-40 flex items-center justify-center"
+            className="w-full sm:w-1/2 z-20 flex items-center justify-center"
           >
             <div className="text-center px-10" id="content">
               <h1 className="text-gray-300 text-center font-bold text-6xl sm:text-5xl italic pb-8">
@@ -168,7 +168,7 @@ export const Projects = () => {
             whileInView={{ opacity: 1, y: 0 }}
             initial={{ opacity: 0, y: 100 }}
             transition={{ duration: 0.8 }}
-            className="w-full sm:w-1/2 z-40 flex items-center justify-center"
+            className="w-full sm:w-1/2 z-20 flex items-center justify-center"
           >
             <div className="text-center px-10" id="content">
               <h1 className="text-gray-300 text-center font-bold text-6xl sm:text-5xl italic pb-8">
@@ -197,7 +197,7 @@ export const Projects = () => {
             whileInView={{ opacity: 1 }}
             initial={{ opacity: 0 }}
             transition={{ duration: 0.8 }}
-            className="w-full sm:w-1/2 z-40 p-5 flex items-center justify-center"
+            className="w-full sm:w-1/2 z-20 p-5 flex items-center justify-center"
           >
             <img
               className="justify-center rounded-[20px] z-20 sm:h-[300px] sm:w-[500px] mt-20"

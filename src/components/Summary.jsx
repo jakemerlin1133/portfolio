@@ -28,7 +28,7 @@ export const Summary = () => {
   return (
     <>
       <div
-        className="z-[1] h-auto w-full"
+        className="h-auto w-full"
         style={{
           background: `url(${Wallpaper1})`,
           backgroundRepeat: "no-repeat",
@@ -41,10 +41,10 @@ export const Summary = () => {
             whileInView={{ opacity: 1, x: 0 }}
             initial={{ opacity: 0, x: -100 }}
             transition={{ duration: 0.8 }}
-            className="w-full sm:w-1/2 sm:z-40 flex items-center justify-center"
+            className="w-full sm:w-1/2 sm:z-20 flex items-center justify-center"
           >
             <motion.div
-              className="text-center px-10 pb-6  pt-24 sm:pt-2 sm:pl-24 "
+              className="text-center px-10 pb-6 pt-24 sm:pt-2 sm:pl-24 "
               id="content"
             >
               <h6 className="text-gray-300 text-2xl font-italic sm:text-start">
@@ -134,7 +134,7 @@ export const Summary = () => {
               </div>
             </motion.div>
           </motion.div>
-          <motion.div className="w-full sm:w-1/2 z-40 flex mb-0">
+          <motion.div className="w-full sm:w-1/2 z-20 flex mb-0">
             <motion.img
               whileInView={{ opacity: 1 }}
               initial={{ opacity: 0 }}
