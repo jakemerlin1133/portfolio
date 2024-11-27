@@ -15,10 +15,16 @@ const Lists = [
 
 export const Navbar = () => {
   const [selectList, setSelectList] = useState("Home");
+  const [selectMenu, setSelectedMenu] = useState(false);
 
   const handleSelect = (selectedList) => {
     setSelectList(selectedList);
     console.log(selectList);
+  };
+
+  const handleSelectMenu = () => {
+    setSelectedMenu((preventState) => !preventState);
+    console.log(selectMenu);
   };
 
   return (
@@ -50,31 +56,54 @@ export const Navbar = () => {
       </div>
 
       {/* Mobile Slidebar */}
-      <div className="sm:hidden fixed flex justify-end items-end w-screen bg-black z-50 pr-4">
-        <MdMenu className="text-3xl z-50 text-gray-200" />
+      <div className="sm:hidden fixed flex justify-end items-end w-screen bg-black z-50 p-2 pr-4">
+        <MdMenu
+          className="text-3xl z-50 text-gray-200"
+          onClick={handleSelectMenu}
+        />
       </div>
 
-      <div className="sm:hidden relative w-screen z-40">
-        <div className="fixed bg-blue-900 top-0 right-0 h-screen w-7/12 z-50">
-          <nav className="bg-black z-50 pt-10 h-full">
-            <ul className="flex flex-col">
-              {Lists.map((list, index) => {
-                return (
-                  <NavList
-                    key={index}
-                    isSelected={selectList === list.name}
-                    onSelect={() => handleSelect(list.name)}
-                    listName={list.name}
-                    path={list.path}
-                  />
-                );
-              })}
-            </ul>
-          </nav>
-        </div>
-      </div>
+      <AnimatePresence>
+        {selectMenu && (
+          <motion.div
+            initial={{ x: "100%" }}
+            animate={{ x: 0 }}
+            exit={{ x: "100%" }}
+            transition={{ duration: 0.5, ease: "easeInOut" }}
+            className="sm:hidden fixed top-0 w-screen z-40"
+          >
+            <div className="fixed bg-blue-900 top-0 right-0 h-screen w-7/12 z-50">
+              <nav className="bg-black z-50 pt-10 h-full">
+                <ul className="flex flex-col">
+                  {Lists.map((list, index) => {
+                    return (
+                      <NavList
+                        key={index}
+                        isSelected={selectList === list.name}
+                        onSelect={() => handleSelect(list.name)}
+                        listName={list.name}
+                        path={list.path}
+                      />
+                    );
+                  })}
+                </ul>
+              </nav>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
-      <div className="fixed bg-black/70 h-screen w-screen"></div>
+      <AnimatePresence>
+        {selectMenu && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5, ease: "easeInOut" }}
+            className="fixed bg-black/70 h-screen w-screen"
+          ></motion.div>
+        )}
+      </AnimatePresence>
     </>
   );
 };
