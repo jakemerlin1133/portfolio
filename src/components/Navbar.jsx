@@ -19,7 +19,7 @@ export const Navbar = () => {
 
   const handleSelect = (selectedList) => {
     setSelectList(selectedList);
-    console.log(selectList);
+    setSelectedMenu(false);
   };
 
   const handleSelectMenu = () => {
